@@ -172,7 +172,7 @@ module AmazonAffiliate
 
     gems_path = File.expand_path("../gems/#{dev_version}", __dir__)
 
-    return if !File.exists?(gems_path)
+    return if !File.exist?(gems_path)
 
     FileUtils.mv gems_path, gems_path.gsub(dev_version, RUBY_VERSION)
   end
